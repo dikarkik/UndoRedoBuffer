@@ -89,7 +89,25 @@ public static class ModificationsFactory
 
     public static unsafe ClearSlotData GetData_ClearSlot(ushort[,] userEmojis, int slotIndex)
     {
-        throw new NotImplementedException();
+        if (slotIndex < 0 || slotIndex > userEmojis.GetLength(1))
+        {
+            Debug.WriteLine("Error: index out of range.");
+            slotIndex = userEmojis.GetLength(1) - 1;
+        }
+
+        ClearSlotData data = new ClearSlotData()
+        {
+            Type = ModificationType.ClearSlot,
+            SlotIndex = slotIndex,
+        };
+
+        int maxUnicodes = ModificationsFactory.MAX_UNICODES;
+        for (int c = 0; c < maxUnicodes; c++)
+        {
+            data.Cleared_unicodes[c] = userEmojis[slotIndex, c];
+        }
+
+        return data;
     }
 
     public static unsafe FlipSetData GetData_FlipSet()

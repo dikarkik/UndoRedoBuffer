@@ -22,7 +22,16 @@ public static class ModificationsExecutor
                 break;
             }
             case ClearSlotData:
-                throw new NotImplementedException();
+            {
+                var data = (ClearSlotData)modificationData;
+                int slotIndex = data.SlotIndex;
+                var totalUnicodes = ModificationsFactory.MAX_UNICODES;
+                for (int i = 0; i < totalUnicodes; i++)
+                {
+                    userEmojis[slotIndex, i] = '\0';
+                }
+                break;
+            }
             case FlipSetData:
                 throw new NotImplementedException();
         }
@@ -44,7 +53,16 @@ public static class ModificationsExecutor
                 break;
             }
             case ClearSlotData:
-                throw new NotImplementedException();
+            {
+                var data = (ClearSlotData)modificationData;
+                int slotIndex = data.SlotIndex;
+                var totalUnicodes = ModificationsFactory.MAX_UNICODES;
+                 for (int i = 0; i < totalUnicodes; i++)
+                {
+                    userEmojis[slotIndex, i] = data.Cleared_unicodes[i];
+                }
+                break;
+            }
             case FlipSetData:
                 throw new NotImplementedException();
         }

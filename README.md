@@ -51,5 +51,3 @@ TO DO:
 - Print alerts:
     Cannot undo: "No more previous changes were found in the buffer."
     Cannot redo: "No more forward changes were found in the buffer."
-- Check the pointers:
-    ModificationsFactory: Do methods uses the object address instead of value copies?

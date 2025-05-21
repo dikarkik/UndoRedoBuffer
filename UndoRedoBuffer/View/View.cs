@@ -80,26 +80,38 @@ public static class Screenview
 		var totalSlots = buffer.totalSlots;
 		for (int i = 0; i < totalSlots; i++)
 		{
-			if (buffer.GetDataAtIndex(i) is SetRandomEmojiData data)
+			var data = buffer.GetDataAtIndex(i);
+			switch (data)
 			{
-				Console.Write($"[ {data.SlotIndex:D2}->");
-				
-				int maxCharacters = ModificationsFactory.MAX_UNICODES;
-				for (int character = 0; character < maxCharacters; character++)
+				case SetRandomEmojiData:
 				{
-					if (data.New_unicodes[character] != '\0')
+					var setRandom = (SetRandomEmojiData)data;
+					Console.Write($"[ {setRandom.SlotIndex:D2}->");
+
+					int maxCharacters = ModificationsFactory.MAX_UNICODES;
+					for (int character = 0; character < maxCharacters; character++)
 					{
-						Console.Write($"{(char)data.New_unicodes[character]}");
+						if (setRandom.New_unicodes[character] != '\0')
+						{
+							Console.Write($"{(char)setRandom.New_unicodes[character]}");
+						}
 					}
+
+					Console.Write(" ]");
+					break;
 				}
-				
-				Console.Write(" ]");
+				case ClearSlotData:
+				{
+					var clearSlot = (ClearSlotData)data;
+					Console.Write($"[ {clearSlot.SlotIndex:D2}->✖️  ]");
+					break;
+				}
+				default:
+				{
+					Console.Write($"[ ------ ]");
+					break;
+				}
 			}
-			else
-			{
-				Console.Write($"[ ------ ]");
-			}
-		
 		}
 		Console.WriteLine();
 		Console.WriteLine();
