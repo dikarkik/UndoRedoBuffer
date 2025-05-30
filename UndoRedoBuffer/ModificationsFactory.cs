@@ -110,8 +110,11 @@ public static class ModificationsFactory
         return data;
     }
 
-    public static unsafe FlipSetData GetData_FlipSet()
+    public static FlipSetData GetData_FlipSet()
     {
-        throw new NotImplementedException();
+        return new FlipSetData()
+        {
+            Type = ModificationType.FlipSet,
+        };
     }
 }

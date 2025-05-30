@@ -106,6 +106,9 @@ public static class Screenview
 					Console.Write($"[ {clearSlot.SlotIndex:D2}->✖️  ]");
 					break;
 				}
+				case FlipSetData:
+					Console.Write($"[ 🔄FLIP🔄 ]");
+					break;
 				default:
 				{
 					Console.Write($"[ ------ ]");
