@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# 
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndoRedoBuffer", "UndoRedoBuffer\UndoRedoBuffer.csproj", "{276D6C94-FAFF-48FE-833E-1E86F323E0B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndoRedoBuffer.Tests", "UndoRedoBuffer.Tests\UndoRedoBuffer.Tests.csproj", "{6074D54B-3F08-41CE-A24E-BEADA6480270}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +15,9 @@ Global
 		{276D6C94-FAFF-48FE-833E-1E86F323E0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{276D6C94-FAFF-48FE-833E-1E86F323E0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{276D6C94-FAFF-48FE-833E-1E86F323E0B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6074D54B-3F08-41CE-A24E-BEADA6480270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6074D54B-3F08-41CE-A24E-BEADA6480270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6074D54B-3F08-41CE-A24E-BEADA6480270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6074D54B-3F08-41CE-A24E-BEADA6480270}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
