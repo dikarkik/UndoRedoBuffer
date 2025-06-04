@@ -35,6 +35,7 @@ public unsafe struct FlipSetData
 
 public static class ModificationsFactory
 {
+    public const int TOTAL_SET_EMOJIS = 5;
     public const int MAX_UNICODES = 10;
     
     // Carefully selected emojis which does not add or remove spaces when getting printed in console.

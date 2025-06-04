@@ -48,7 +48,6 @@ The ring buffer allows to store the user actions.
 ---------------------------------------------------------------------
 
 TO DO:
-- Tests
 - Print alerts:
     Cannot undo: "No more previous changes were found in the buffer."
     Cannot redo: "No more forward changes were found in the buffer."
