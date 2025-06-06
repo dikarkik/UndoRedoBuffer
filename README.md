@@ -41,7 +41,7 @@ How to undo/redo modifications:
 
 The ring buffer allows to store the user actions.
 
-<img src="./Docs/buffer_example.svg" width="450" alt="buffer example">
+<img src="./Docs/buffer_example.svg" width="900" alt="buffer example">
 
 
 
